@@ -16,7 +16,9 @@ BLEU = [0, 0, 255]
 # DÉBUT
 
 ma_position = 600
-sens = 1
+
+image_gauche = pygame.image.load('3D-icon-bird-left.png').convert_alpha()
+image_droite = pygame.image.load('3D-icon-bird-right.png').convert_alpha()
 
 clock = pygame.time.Clock()
 
@@ -29,15 +31,10 @@ while fini == 0:
     
     # TICK
     
-    if sens == -1:
-        ma_position = ma_position - 5
-    else:
-        ma_position = ma_position + 5
+    ma_position = ma_position - 5
     if ma_position > 700:
-        sens = -1
-    if ma_position < 0:
-        sens = 1
-    print(sens, ma_position)
+        ma_position = 0
+    print(ma_position)
 
     # DESSIN
     ecran.fill(BLANC)
@@ -46,9 +43,9 @@ while fini == 0:
     pygame.draw.circle(ecran, BLEU, [100,200], 20)
     pygame.draw.circle(ecran, VERT, [ma_position, 80], 10)
     if sens == -1:
-        pygame.draw.polygon(ecran, ROUGE, [[0,50], [100,0], [100,100]])
+        ecran.blit(image_gauche, [10,10])
     else:
-        pygame.draw.polygon(ecran, ROUGE, [[100,50], [0,0], [0,100]])
+        ecran.blit(image_droite, [10,10])
     
     pygame.display.flip()
     
