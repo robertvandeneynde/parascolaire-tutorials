@@ -29,6 +29,8 @@ while fini == 0:
     # TICK
     
     ma_position = ma_position + 5
+    if ma_position > 700:
+        ma_position = 0
     print(ma_position)
 
     # DESSIN
