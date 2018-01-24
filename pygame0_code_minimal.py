@@ -44,17 +44,17 @@ while fini == 0:
     
     pygame.draw.rect(ecran, ROUGE, [100,200, 20,40])
     pygame.draw.circle(ecran, BLEU, [100,200], 20)
-    pygame.draw.circle(ecran, VERT, [ma_position, 80], 10)
     if sens == -1:
         pygame.draw.polygon(ecran, ROUGE, [
-            [ma_position + 0, 50],
-            [ma_position + 100, 0],
-            [ma_position + 100, 100]])
+            [ma_position + 0, 80 + 50],
+            [ma_position + 100, 80 + 0],
+            [ma_position + 100, 80 + 100]])
     else:
         pygame.draw.polygon(ecran, ROUGE, [
-            [ma_position + 100, 50],
-            [ma_position + 0, 0],
-            [ma_position + 0, 100]])
+            [ma_position + 100, 80 + 50],
+            [ma_position + 0, 80 + 0],
+            [ma_position + 0, 80 + 100]])
+    pygame.draw.circle(ecran, VERT, [ma_position, 80], 10)
     
     pygame.display.flip()
     
