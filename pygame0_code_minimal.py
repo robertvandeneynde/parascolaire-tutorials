@@ -28,6 +28,8 @@ while fini == 0:
     
     # TICK
     
+    ma_position = ma_position + 1
+    print(ma_position)
 
     # DESSIN
     ecran.fill(BLANC)
@@ -38,6 +40,6 @@ while fini == 0:
     
     pygame.display.flip()
     
-    clock.tick(60)
+    clock.tick(2)
     
 pygame.quit()
