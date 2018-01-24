@@ -16,6 +16,7 @@ BLEU = [0, 0, 255]
 # DÉBUT
 
 ma_position = 600
+sens = 1
 
 clock = pygame.time.Clock()
 
