@@ -28,7 +28,7 @@ while fini == 0:
     
     # TICK
     
-    ma_position = ma_position + 1
+    ma_position = ma_position + 5
     print(ma_position)
 
     # DESSIN
@@ -40,6 +40,6 @@ while fini == 0:
     
     pygame.display.flip()
     
-    clock.tick(2)
+    clock.tick(60)
     
 pygame.quit()
