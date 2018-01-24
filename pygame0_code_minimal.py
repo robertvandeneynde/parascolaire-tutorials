@@ -16,7 +16,7 @@ BLEU = [0, 0, 255]
 # DÉBUT
 
 ma_position = 600
-sens = -1
+sens = 1
 
 clock = pygame.time.Clock()
 
@@ -34,8 +34,8 @@ while fini == 0:
     else:
         ma_position = ma_position + 5
     if ma_position > 700:
-        ma_position = 0
-    print(ma_position)
+        sens = -1
+    print(sens, ma_position)
 
     # DESSIN
     ecran.fill(BLANC)
