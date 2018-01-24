@@ -35,6 +35,8 @@ while fini == 0:
         ma_position = ma_position + 5
     if ma_position > 700:
         sens = -1
+    if ma_position < 0:
+        sens = 1
     print(sens, ma_position)
 
     # DESSIN
