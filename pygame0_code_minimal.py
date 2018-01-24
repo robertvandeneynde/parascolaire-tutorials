@@ -15,7 +15,8 @@ BLEU = [0, 0, 255]
 
 # DÉBUT
 
-ma_position = 600
+mon_x = 600
+mon_y = 80
 sens = 1
 
 clock = pygame.time.Clock()
@@ -30,31 +31,35 @@ while fini == 0:
     # TICK
     
     if sens == -1:
-        ma_position = ma_position - 5
+        mon_x = mon_x - 5
     else:
-        ma_position = ma_position + 5
-    if ma_position > 700:
+        mon_x = mon_x + 5
+    if mon_x > 700:
         sens = -1
-    if ma_position < 0:
+    if mon_x < 0:
         sens = 1
-    print(sens, ma_position)
+    print(sens, mon_x)
 
     # DESSIN
     ecran.fill(BLANC)
     
     pygame.draw.rect(ecran, ROUGE, [100,200, 20,40])
     pygame.draw.circle(ecran, BLEU, [100,200], 20)
+    
+    centre_triangle_x, centre_triangle_y = 50, 50
+    
     if sens == -1:
         pygame.draw.polygon(ecran, ROUGE, [
-            [ma_position + 0 - 50, 80 + 50 - 50],
-            [ma_position + 100 - 50, 80 + 0 - 50],
-            [ma_position + 100 - 50, 80 + 100 - 50]])
+            [mon_x + 0 - centre_triangle_x, mon_y + 50 - centre_triangle_y],
+            [mon_x + 100 - centre_triangle_x, mon_y + 0 - centre_triangle_y],
+            [mon_x + 100 - centre_triangle_x, mon_y + 100 - centre_triangle_y]])
     else:
         pygame.draw.polygon(ecran, ROUGE, [
-            [ma_position + 100 - 50, 80 + 50 - 50],
-            [ma_position + 0 - 50, 80 + 0 - 50],
-            [ma_position + 0 - 50, 80 + 100 - 50]])
-    pygame.draw.circle(ecran, VERT, [ma_position, 80], 10)
+            [mon_x + 100 - centre_triangle_x, mon_y + 50 - centre_triangle_y],
+            [mon_x + 0 - centre_triangle_x, mon_y + 0 - centre_triangle_y],
+            [mon_x + 0 - centre_triangle_x, mon_y + 100 - centre_triangle_y]])
+    
+    pygame.draw.circle(ecran, VERT, [mon_x, mon_y], 10)
     
     pygame.display.flip()
     
