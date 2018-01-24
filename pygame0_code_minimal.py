@@ -46,9 +46,15 @@ while fini == 0:
     pygame.draw.circle(ecran, BLEU, [100,200], 20)
     pygame.draw.circle(ecran, VERT, [ma_position, 80], 10)
     if sens == -1:
-        pygame.draw.polygon(ecran, ROUGE, [[0,50], [100,0], [100,100]])
+        pygame.draw.polygon(ecran, ROUGE, [
+            [ma_position + 0, 50],
+            [ma_position + 100, 0],
+            [ma_position + 100, 100]])
     else:
-        pygame.draw.polygon(ecran, ROUGE, [[100,50], [0,0], [0,100]])
+        pygame.draw.polygon(ecran, ROUGE, [
+            [ma_position + 100, 50],
+            [ma_position + 0, 0],
+            [ma_position + 0, 100]])
     
     pygame.display.flip()
     
