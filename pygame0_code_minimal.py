@@ -4,6 +4,8 @@ from __future__ import print_function, division
 from OpenGL.GL import *
 from OpenGL.GL import shaders
 
+from vec3_utils import *
+
 import pygame
 pygame.init()
 
@@ -17,6 +19,12 @@ VERT = [0, 1, 0]
 BLEU = [0, 0, 1]
 ORANGE = [255/255, 153/255, 0]
 ROSE = [1.0, 0.75, 0.80]
+
+vertices = farray([
+    0.6, 0.6, 0.0, 1.0,
+    -0.6, 0.6, 0.0, 1.0,
+    0.0, -0.6, 0.0, 1.0,
+])
 
 # DÉBUT
 
