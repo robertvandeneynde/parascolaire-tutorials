@@ -11,10 +11,12 @@ taille = [512, 512]
 ecran = pygame.display.set_mode(taille, pygame.OPENGL | pygame.DOUBLEBUF)
 
 NOIR = [0, 0, 0]
-BLANC = [255, 255, 255]
-ROUGE = [255, 0, 0]
-VERT = [0, 255, 0]
-BLEU = [0, 0, 255]
+BLANC = [1, 1, 1]
+ROUGE = [1, 0, 0]
+VERT = [0, 1, 0]
+BLEU = [0, 0, 1]
+ORANGE = [255/255, 153/255, 0]
+ROSE = [1.0, 0.75, 0.80]
 
 # DÉBUT
 
