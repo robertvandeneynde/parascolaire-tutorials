@@ -32,7 +32,14 @@ void main() {
 '''
 
 fragment_shader = '''
-// contenu du fragment shader
+#version 330
+// fragment shader
+
+out vec4 pixel; // notre but est de donner la couleur du pixel
+
+void main() {
+    pixel = vec4(1, 0.5, 0, 1); // orange, transparence 100%
+}
 '''
 
 shader_program = shaders.compileProgram(
