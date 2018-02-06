@@ -36,6 +36,14 @@ while fini == 0:
     glClearColor(0.9, 0.9, 0.5, 1.0) # du jaune, 1.0 est la transparence
     glClear(GL_COLOR_BUFFER_BIT)
     
+    glUseProgram(shader_program)
+    
+    glBindVertexArray(vertex_array_object)
+    # ici on fera un dessin opengl utilisant le vao et le shader program
+    glBindVertexArray(0)
+    
+    glUseProgram(0)
+    
     pygame.display.flip()
     
     clock.tick(60)
