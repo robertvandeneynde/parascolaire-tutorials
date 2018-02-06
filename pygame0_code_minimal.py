@@ -72,7 +72,7 @@ while fini == 0:
     glUseProgram(shader_program)
     
     glBindVertexArray(vertex_array_object)
-    # ici on fera un dessin opengl utilisant le vao et le shader program
+    glDrawArrays(GL_TRIANGLES, 0, 3)
     glBindVertexArray(0)
     
     glUseProgram(0)
