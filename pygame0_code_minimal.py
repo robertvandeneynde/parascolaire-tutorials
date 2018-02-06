@@ -21,7 +21,14 @@ ORANGE = [255/255, 153/255, 0]
 ROSE = [1.0, 0.75, 0.80]
 
 vertex_shader = '''
-// contenu du vertex shader
+#version 330
+// vertex shader
+
+in vec4 position; // on lit le xyzw
+
+void main() {
+    gl_Position = position; // et on l'écrit
+}
 '''
 
 fragment_shader = '''
@@ -72,7 +79,7 @@ while fini == 0:
     glUseProgram(shader_program)
     
     glBindVertexArray(vertex_array_object)
-    glDrawArrays(GL_TRIANGLES, 0, 3)
+    glDrawArrays(GL_TRIANGLES, 0, 3) # on dessine 3 points, on commence au point numéro 0, on en fait des TRIANGLES
     glBindVertexArray(0)
     
     glUseProgram(0)
