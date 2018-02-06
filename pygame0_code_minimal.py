@@ -7,8 +7,8 @@ from OpenGL.GL import shaders
 import pygame
 pygame.init()
 
-taille = [700, 500]
-ecran = pygame.display.set_mode(taille)
+taille = [512, 512]
+ecran = pygame.display.set_mode(taille, pygame.OPENGL | pygame.DOUBLEBUF)
 
 NOIR = [0, 0, 0]
 BLANC = [255, 255, 255]
