@@ -26,6 +26,11 @@ vertices = farray([
     0.0, -0.6, 0.0, 1.0,
 ])
 
+vertex_buffer = glGenBuffers(1)
+glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer) # on sélectionne le vbo "vertex_buffer"
+glBufferData(GL_ARRAY_BUFFER, 48, vertices, GL_STATIC_DRAW) # 48 bytes
+glBindBuffer(GL_ARRAY_BUFFER, 0) # aucun vbo sélectionné
+
 # DÉBUT
 
 clock = pygame.time.Clock()
