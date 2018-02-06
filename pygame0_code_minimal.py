@@ -33,11 +33,8 @@ while fini == 0:
     
 
     # DESSIN
-    ecran.fill(BLANC)
-    
-    pygame.draw.rect(ecran, ROUGE, [100,200, 20,40])
-    pygame.draw.circle(ecran, BLEU, [100,200], 20)
-    pygame.draw.circle(ecran, VERT, [150, 80], 10)
+    glClearColor(0.9, 0.9, 0.5, 1.0) # du jaune, 1.0 est la transparence
+    glClear(GL_COLOR_BUFFER_BIT)
     
     pygame.display.flip()
     
