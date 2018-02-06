@@ -33,7 +33,8 @@ vertex_buffer = glGenBuffers(1)
 glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer) # on sélectionne le vbo "vertex_buffer"
 glBufferData(GL_ARRAY_BUFFER, ArrayDatatype.arrayByteCount(vertices), vertices, GL_STATIC_DRAW)
 
-# manipulation vao
+glEnableVertexAttribArray(0) # on active l'attribut 0
+glVertexAttribPointer(0, 4, GL_FLOAT, False, 0, ctypes.c_void_p(0)) # données par groupe de 4 Float dans l'attribut 0
 
 glBindBuffer(GL_ARRAY_BUFFER, 0) # aucun vbo sélectionné
 glBindVertexArray(0) # aucun vao sélectionné
