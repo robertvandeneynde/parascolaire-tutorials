@@ -20,6 +20,18 @@ BLEU = [0, 0, 1]
 ORANGE = [255/255, 153/255, 0]
 ROSE = [1.0, 0.75, 0.80]
 
+vertex_shader = '''
+// contenu du vertex shader
+'''
+
+fragment_shader = '''
+// contenu du fragment shader
+'''
+
+shader_program = shaders.compileProgram(
+    shaders.compileShader(vertex_shader, GL_VERTEX_SHADER),
+    shaders.compileShader(fragment_shader, GL_FRAGMENT_SHADER))
+
 vertices = farray([
     0.6, 0.6, 0.0, 1.0,
     -0.6, 0.6, 0.0, 1.0,
